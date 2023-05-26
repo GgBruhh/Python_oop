@@ -3,13 +3,10 @@ import random
 
 class WordFinder:
     
-    def __repr__(self):
-        f"Words:{line}"
+    def __init__(self, path):
         
-        
+        file = open(path)
 
-    def get_words():
-        file = open("words.txt", "r")
-        for line in file:
-            print(line)
-            file.close()
+        self.words = self.parse(file)
+
+        print(f"{len(self.words)} words read")
