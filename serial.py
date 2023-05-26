@@ -8,14 +8,13 @@ class SerialGenerator:
     def __repr__(self):
         f"<SerialGenerator start={self.start} next={self.next}>"
 
-    def generate(self, start=100):
+    def generate(self):
 
-        start + 1
-        return start
+        self.next += 1
+        return self.next
 
-    def reset():
-        num = 100
-        return num
+    def reset(self):
+        self.next = self.start
 
     """Machine to create unique incrementing serial numbers.
     
